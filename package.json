@@ -6,11 +6,14 @@
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "build:analyze": "cross-env NODE_OPTIONS=--no-deprecation ANALYZE_BUNDLE=true next build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
@@ -25,15 +28,25 @@
     "payload": "latest",
     "react": "19.0.0-rc-65a56d0e-20241020",
     "react-dom": "19.0.0-rc-65a56d0e-20241020",
-    "sharp": "0.32.6"
+    "sharp": "0.33.5"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.0.0",
     "@types/node": "^22.5.4",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
-    "eslint": "^8",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint": "^9.15.0",
     "eslint-config-next": "15.0.0",
-    "typescript": "5.7.2"
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-functional": "^7.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-perfectionist": "^4.0.3",
+    "eslint-plugin-promise": "^7.2.0",
+    "prettier": "^3.3.3",
+    "typescript": "5.7.2",
+    "typescript-eslint": "^8.16.0"
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0"
