@@ -20,6 +20,7 @@ export default tseslint.config(
     pluginPromise.configs['flat/recommended'],
     // importPlugin.flatConfigs.recommended, // eh, meh
     jsxA11y.flatConfigs.recommended,
+    // comment out functional when you've had enough
     functional.configs.externalTypeScriptRecommended,
     functional.configs.recommended,
     functional.configs.stylistic,
