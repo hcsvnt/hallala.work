@@ -5,5 +5,5 @@ export default {
     printWidth: 100,
     tabWidth: 4,
     arrowParens: 'avoid',
-    trailingComma: 'none',
-}
+    trailingComma: 'none'
+};
