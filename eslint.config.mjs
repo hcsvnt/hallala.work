@@ -46,7 +46,8 @@ export default tseslint.config(
         files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
         rules: {
             ...pluginNext.configs.recommended.rules,
-            ...pluginNext.configs['core-web-vitals'].rules
+            ...pluginNext.configs['core-web-vitals'].rules,
+            '@typescript-eslint/no-unused-vars': 'warn', // because we're not perfect
         }
     }
 );

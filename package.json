@@ -7,7 +7,7 @@
     "scripts": {
         "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
         "build:analyze": "cross-env NODE_OPTIONS=--no-deprecation ANALYZE_BUNDLE=true next build",
-        "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbopack",
+        "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
         "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
         "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
         "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
@@ -22,14 +22,17 @@
         "@payloadcms/next": "latest",
         "@payloadcms/payload-cloud": "latest",
         "@payloadcms/richtext-lexical": "latest",
+        "@vanilla-extract/css": "^1.16.1",
         "cross-env": "^7.0.3",
+        "effect": "^3.10.19",
         "framer-motion": "^11.12.0",
         "graphql": "^16.8.1",
         "next": "^15.0.3",
         "payload": "latest",
         "react": "19.0.0-rc-69d4b800-20241021",
         "react-dom": "19.0.0-rc-69d4b800-20241021",
-        "sharp": "0.33.5"
+        "sharp": "0.33.5",
+        "zod": "^3.23.8"
     },
     "devDependencies": {
         "@next/bundle-analyzer": "^15.0.0",
@@ -38,6 +41,7 @@
         "@types/react-dom": "^19.0.0-rc.1",
         "@typescript-eslint/eslint-plugin": "^8.15.0",
         "@typescript-eslint/parser": "^8.15.0",
+        "@vanilla-extract/next-plugin": "^2.4.7",
         "eslint": "^9.15.0",
         "eslint-config-next": "15.0.0",
         "eslint-config-prettier": "^9.1.0",
