@@ -6,7 +6,8 @@ export const metadata: Metadata = {
     keywords: ['page', 'keywords']
 };
 
+// todo: make this nicer one day
 // eslint-disable-next-line functional/functional-parameters
 export default function Page() {
-    return <h1>Home page</h1>;
+    return <h1>next js + payload cms template</h1>;
 }
